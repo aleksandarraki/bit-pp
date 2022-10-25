@@ -25,6 +25,7 @@ switch (day) {
         break ;
         default :
         result = "Try again" ;
+        break;
 
   
 }
@@ -62,7 +63,8 @@ switch (a) {
         result = "Sunday";
         break;
     default :
-    result = "Input must be a number between 1 and 7"     
+    result = "Input must be a number between 1 and 7" ;
+    break;    
 }
 console.log(result)
 
@@ -101,6 +103,7 @@ switch (day) {
         break;
         default:
             result = "Input must be number betven 1 and 7";
+            break;
     
 }
 console.log(result)
@@ -152,7 +155,8 @@ switch (month ) {
         result ="December";
         break;
         default:
-            result = "Input must be a number between 1 and 12"
+            result = "Input must be a number between 1 and 12";
+            break;
 }
 console.log(result)
 
@@ -192,7 +196,8 @@ switch (month) {
         result = "outumn";
         break;
         default:
-            result = "Input must be a number betwen 1-12"
+            result = "Input must be a number betwen 1-12";
+            break;
 }
 console.log( result )
 
@@ -221,6 +226,69 @@ switch ( grade ) {
         result = "F";
         break;
         default:
-            result = "Unkown"
+            result = "Unkown";
+            break;
 }
 console.log(result)
+
+/* 7. Write a program that takes as input a city name and outputs the country where the city is.
+You may choose which cities and countries you want to output yourself, however there has
+to be at least 5 countries and 15 cities. Note that each country must have a different
+number of cities. Input different from the listed cities should output a message&quot;Please
+choose a different city&quot;.*/
+
+var city = "Užice";
+result = "";
+switch ( city) {
+    case "Milano":
+    case "Torino":
+    case "Palermo":
+    case "Napoli":
+        result = "Italy";
+        break;
+    case "Beograd":
+    case "Niš":
+    case "Užice":
+        result = "Serbia";
+        break;
+    case "Maribor":
+    case "Ljubljana":
+    case "Kranj":
+        result = "Slovenia";
+        break;
+    case "Berlin":
+    case "Bremen":
+    case "Magdeburg":
+        result = "Germany";
+        break;
+    case "New York":
+    case "Chicago":
+    case "Orlando":
+        result = "USA";
+        break;
+        default:
+            result ="Please choose diferent city&quit";
+            break;
+}
+console.log( result )
+
+/* 8. Write a program that takes as input two numbers and a string denoting the operation (“+”, “-
+”, “*”, “/”) and prints out the appropriate result. Watch out for division by zero!*/
+
+var a = 21;
+var b = 3;
+var operation = "/";
+switch ( operation ) {
+    case "+":
+        console.log( a + b )
+        break;
+    case "-":
+        console.log( a - b )
+        break;
+    case "*":
+        console.log( a * b )
+        break;
+    case "/":
+        console.log( a / b )
+        break;
+}
