@@ -38,7 +38,6 @@ For input 1, output should be “Monday”.
 For input 10, output should be “Input must be a number between 1 and 7”. */
 
 var a = 1 ;
-var b = 10 ;
 result = "" ;
 switch (a) {
     case 1:
@@ -76,7 +75,7 @@ For input 2, output should be It is weekday
 For input 6, output should be It is weekend
 For input 12, output should be “Input must be number between 1 and 7”. */
 
-var day = 7;
+var day = 6;
 result = "";
 switch (day) {
    

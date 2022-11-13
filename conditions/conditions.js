@@ -28,9 +28,9 @@ if ( a % 3 === 0 && a % 5 === 0 ) {
     console.log(a)
 }
 
-var a = 12;
-if ( a % 3 === 0 && a % 5 === 0) {
-    console.log(a)
+var b = 12;
+if ( b % 3 === 0 && b % 5 === 0) {
+    console.log(b)
 }
 
 
@@ -53,7 +53,7 @@ console.log(result)
 var a = 10;
 var result = ""
 if ( typeof a === "number" && a % 2 === 0 ) {
-    result = "5";
+    result = a / 2;
 } else if ( typeof a === "number" && a % 2 === 1 ) {
     result = "X"
 }
@@ -62,7 +62,7 @@ console.log(result)
 var b = 7;
 var result ="";
 if ( typeof b === "number" && b % 2 === 0) {
-    result = " number id divisible by 2";
+    result = b / 2;
 } else if ( typeof b === "number" && b % 2 === 1) {
     result = "X"
 }
@@ -103,7 +103,7 @@ if ( a > b && b > c) {
     console.log( c, b, a );
 }
 
-// 8. Task 5. Write a program that compares two numbers and displays the larger. Display the result inthe console.
+// 8. Task 5. Write a program that compares two numbers and displays the larger. Display the result in the console.
 
 var number1 = 562;
 var number2 = -99999;
@@ -161,7 +161,7 @@ var a = 8;
 var b = 8;
 var result = "";
 if ( a === b ) {
-    result = ( a +b ) * 3;
+    result = ( a + b ) * 3;
 } else if ( a !== b ) {
     result = a + b ;
 }
@@ -174,6 +174,8 @@ var b = 54;
 var result = "";
 if ( a === 50 || b === 50 || a + b === 50) {
     result = "true"
+} else {
+    result = "false"
 }
 console.log( result );
 
@@ -181,7 +183,9 @@ var a = 6;
 var b = 50;
 var result = "";
 if ( a === 50 || b === 50 || a + b === 50) {
-    result = "true"
+    result = "true";
+} else {
+    result = "false";
 }
 console.log( result );
 
@@ -189,7 +193,9 @@ var a = 40;
 var b = 10;
 var result = "";
 if ( a === 50 || b === 50 || a + b === 50) {
-    result = "true"
+    result = "true";
+} else {
+    result = "false";
 }
 console.log( result );
 
