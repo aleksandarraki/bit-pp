@@ -85,7 +85,7 @@ for ( i = 0; i < a.length; i++ ) {
 console.log(sum)
 
 
-// 6. Write a program that checks if a given array is symmetric. An array is symmetric if it can be read the same way both from the left and the right hand side. Input array: [2, 4, -2, 7, -2, 4, 2]  Output: The array is symmetric. Input array: [3, 4, 12, 8] Output: The array isn’t symmetric.
+// 6. Write a program that checks if a given array is symmetric. An array is symmetric if it can be read the same way both from the left and the right hand side. Input array: [2, 4, -2, 7, -2, 4, 2]  Output: The array is symmetric. Input array: [3, 4, 12, 8] Output: The array isn’t symmetric. dario - objasnjenje
 
 // 7. Write a program that intertwines two arrays. You can assume the arrays are of the same  length. Input arrays: [4, 5, 6, 2], [3, 8, 11, 9]  Output array: [4, 3, 5, 8, 6, 11, 2, 9]
 
@@ -117,3 +117,19 @@ for ( i = 0; i < a.length; i++) {
     }
 }
 console.log(b)
+
+
+/* 10. Write a program that inserts a given element e on the given position p in the array a. If the value of the position is greater than the array length, print the error message. Input: e = 78, p = 3, a = [2, -2, 33, 12, 5, 8] Output: [2, -2, 33, 78, 12, 5, 8]
+
+var e = 78;
+var p = 3;
+var a = [2, -2, 33, 12, 5, 8];
+
+for ( i = 0; i < a.length; i++) {
+    if ( p > a.length ) {
+        console.log("error");
+    } else {
+        a[3] = 78;
+    }
+}
+console.log(a)*/
