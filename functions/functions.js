@@ -105,34 +105,36 @@ console.log(f)
 
 // 10. Write a program that calculates the number of appearances of a letter a in a given string. Modify the program so it calculates the number of both letters a and A.
 
-function numberOfletterA(n) {
-    if (typeof(n) !== "string") {
-    console.log("unesite rec");
+function numberOfA (primer) {
+    if ( typeof(primer) !== "string") {
+        console.log("unesite rec");
     }
-    var brojac = 0;
-   for ( i = 0; i < n.lenght; i++ ) {
-    if ( n[i] === "a" ) {
-        brojac += 1;
-    }
-   } 
-   return brojac;
-}
-
-console.log(numberOfletterA(("Aleksandar")))
-
-
-function appOfLetterA (rec){
-    if(typeof(rec) !== 'string'){
-        console.log('Molimo Vas unesite rec');
-    } 
-    var brojac = 0;
-    for(i=0; i<rec.length; i++){
-        if(rec[i] === 'a'){
-            brojac +=1;
+    var sum = 0;
+    for (i = 0; i < primer.length; i++) {
+        if (primer[i] === "a") {
+            sum += 1;
         }
     }
-    return brojac;
+    return sum;
 }
+var x = numberOfA("Aleksandar");
+console.log(x)
 
-var r = appOfLetterA("Aleksandar");
-console.log(r)
+// b.
+
+function numberOfA (primer) {
+    if ( typeof(primer) !== "string") {
+        console.log("unesite rec");
+    }
+    var sum = 0;
+    for ( i = 0; i < primer.length; i++){
+        if ( primer[i] === "a" || primer [i] === "A"){
+            sum += 1;
+        }
+    }
+    return sum;
+}
+var x = numberOfA("Aleksandar");
+console.log(x)
+
+
