@@ -138,3 +138,22 @@ var x = numberOfA("Aleksandar");
 console.log(x)
 
 
+// 11. Write a program that concatenates a given string given number of times. For example, if “abc” and 4 are given values, the program prints out abcabcabcabc.
+
+function newWord ( a, b ) {
+    if ( typeof(a) !== "string" ){
+        return "unesi rec";
+    }
+    var result = "";
+    for ( i = 0; i < b; i++){
+        if ( typeof(a) === "string"){
+            result += a;
+        }
+    }
+    return result;
+}
+
+var x = newWord("leptir", 5 );
+var k = newWord("Bora", 2 );
+console.log(x);
+console.log(k)
