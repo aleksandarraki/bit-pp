@@ -72,19 +72,19 @@ console.log(s)
 
 //8. Write a program that calculates a number of appearances of a given number in a given array. Inputs: a = [2, 4, 7, 8, 7, 7, 1], e = 7 Result: 3
 
-function repetition(e) {
-    var string = [2, 4, 7, 8, 7, 7, 1];
+function repetition(a,e) {
+    
     var brojač = 0;
-    for ( var i = 0; i < string.length; i++) {
-        if ( string[i] === e ) {
+    for ( var i = 0; i < a.length; i++) {
+        if ( a[i] === e ) {
             brojač ++;
         }
        
     }
     return brojač;
 }
-var a = repetition(7);
-console.log(a)
+var x = repetition([2, 4, 7, 8, 7, 7, 1], 7);
+console.log(x)
 
 
 //9. Write a program that calculates the sum of odd elements of a given array. 

@@ -88,7 +88,7 @@ for ( i = 0; i < a.length; i++) {
 
 // 6. Write a program that outputs the sum of squares of the first 20 numbers.
 
-var i = 0;
+//var i = 0;
 var sum = 0;
 var square = 0;
 for ( var i = 0; i <=20; i++) {
