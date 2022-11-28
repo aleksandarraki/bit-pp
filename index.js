@@ -5,7 +5,7 @@ var s = "1s" ;
 s++;
 console.log(s)
 
-var 1 = "1s"
+var a = "1s"
 console.log(a)
 
 // Think about expressions: 3-2-31, 3*5-7/3, 4/2-1.14*3.
