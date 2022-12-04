@@ -18,15 +18,15 @@
 
 // 2. Write a function that combines two arrays by alternatingly taking elements. [‘a’,’b’,’c’], [1,2,3] --> [‘a’,1,’b’,2,’c’,3]
 
-function combineArrays (a1,a2){
+function combineArrays(a1, a2) {
     var newArr = [];
-    for ( i = 0; i < a1.length || i < a2.length; i++ ){
+    for (i = 0; i < a1.length || i < a2.length; i++) {
         newArr[newArr.length] = a1[i];
         newArr[newArr.length] = a2[i];
     }
     return newArr;
 }
-console.log(combineArrays(["a,","b","c"], [1,2,3]))
+console.log(combineArrays(["a,", "b", "c"], [1, 2, 3]))
 
 
 // 3. Write a function that rotates a list by k elements. For example [1,2,3,4,5,6] rotated by two becomes [3,4,5,6,1,2]
@@ -38,11 +38,11 @@ function returnArrayOfDigits(number) {
     var s = "";
     var a = [];
     s += number;
-    for ( i = 0; i < s.length; i++ ){
+    for (i = 0; i < s.length; i++) {
         a[a.length] = s[i];
-    } for ( i = 0; i < a.length; i++){
+    } for (i = 0; i < a.length; i++) {
         a[i] = parseInt(a[i]);
-    } 
+    }
     return a;
 
 }
@@ -65,35 +65,12 @@ console.log(returnArrayOfDigits(1256552))
 
 // 6. Write a function to input temperature in Centigrade and convert to Fahrenheit.
 
-function celciusToFarenheit (C){
-  var f = (C * 9 / 5) + 32;
-  return f;
+function celciusToFarenheit(C) {
+    var f = (C * 9 / 5) + 32;
+    return f;
 }
 console.log(celciusToFarenheit(32))
 
 // 7. Write a function to find the maximum element in array of numbers. Filter out all non-number elements.
 
 
-
-function a(){
-    console.log( "A!" )
-    return function (){
-        console.log("B!")
-    }
-}
-var b = a();
-b()
-
-function one(){
-    return 1;
-}
-
-function two(){
-    return 2;
-}
-
-function three(a,b){
-    return a() + b();
-}
-
-console.log(three(one,two))
