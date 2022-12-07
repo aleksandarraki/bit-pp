@@ -86,3 +86,16 @@ console.log(surface)
 // Input: [2, 8, 11, 4, 9, 3], callback function checks if the number is odd
 // Output: [11, 9, 3]
 
+function filter(arr, cb) {
+    var newarr = [];
+    for (i = 0; i < arr.length; i++) {
+        var element = arr[i];
+        var isTrue = cb(element);
+        if (isTrue) {
+            newarr[newarr.length] = arr[i];
+        }
+    }
+    return newarr;
+}
+
+console.log(filter([2, 8, 11, 4, 9, 3], function isOdd(e) { return e % 2 !== 0 }))
