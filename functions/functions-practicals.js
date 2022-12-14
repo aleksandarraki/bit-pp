@@ -93,3 +93,22 @@ console.log(deleteEverySecond([3, 5, 1, 8, 90, -4, 23, 1, 67]))
 // Input: [3, 5, 1, 8, 90, -4, 23, 1, 67], 2, 6
 // Output: [3, 5, 2, 16, 180, -8, 46, 1, 67]
 
+
+
+// 8. Write a function that sorts an array of strings by the number of appearances of the letter
+// ‘a’ or ‘A’.
+// Input: [‘apple’, ‘tea’, ‘amazing’, ‘morning’, ‘JavaScript’]
+// Output: [‘morning’, ‘apple’, ‘tea’, ‘JavaScript’, ‘amazing’]
+
+function sort(arr) {
+    var result = [];
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i][i] === "a" || arr[i][i] === "A") {
+            continue;
+        }
+        result[result.length] = arr[i];
+    }
+    return result;
+}
+console.log(sort(["apple", "tea", "amazing", "morning", "JavaScript"]))
+
