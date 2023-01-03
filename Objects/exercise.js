@@ -115,3 +115,56 @@ p.changeCuisineType("Spanish cuisine");
 console.log(p);
 p.deleteIngredient("garlik");
 console.log(p);
+
+
+// this and constructor function
+
+function Recepie(n, ct, com, ing, t, ins) {
+
+    this.name = n;
+    this.cuisineType = ct;
+    this.complexity = com;
+    this.ingridients = ing;
+    this.time = t;
+    this.instructions = ins
+    this.printIng = function () {
+        console.log(this.ingridients)
+    };
+    this.checkIsUnder = function () {
+        return this.time < 15;
+    },
+        this.changeCuisineType = function (newCuisineType) {
+            this.cuisineType = newCuisineType;
+        };
+    this.deleteIngredient = function (ingredient) {
+        var updatedIngredients = [];
+        for (i = 0; i < this.ingridients.length; i++) {
+            if (this.ingridients[i] !== ingredient) {
+                updatedIngredients[updatedIngredients.length] = this.ingridients[i];
+            }
+        }
+        this.ingridients = updatedIngredients;
+    }
+
+
+}
+
+var p = new Recepie(
+    "Paprikas",
+    "Madjarska kuhinja",
+    2,
+    ["paprika", "crni luk", "biber"],
+    60,
+    "Sipati vodu u lonac..."
+)
+
+// var c = p;
+// c.name = "test";
+// console.log(c);
+// console.log(p);
+
+
+var stringObj = JSON.stringify(p);
+// console.log(stringObj);
+var c = JSON.parse(stringObj);
+console.log(c);
