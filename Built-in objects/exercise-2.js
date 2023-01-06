@@ -52,3 +52,30 @@ function convert(string) {
     return string.split(" ")[0] + " " + string.split(" ")[1].slice(0, 1) + ".";
 }
 console.log(convert("John Snow"));
+
+
+
+// 6. Write a function that adds string to the left or right of string, by replacing it’s characters.
+// &#39;0000&#39;, ‘123’, &#39;l&#39; -&gt; &#39;0123&#39;
+// &#39;00000000&#39;, ‘123’, &#39;r&#39; -&gt; &#39;12300000&#39;
+
+
+var addString = function (oldstring, newstring, position) {
+
+    var result = "";
+    var index = 0;
+    if (position === "l") {
+        index = oldstring.length - newstring.length;
+        result = oldstring.slice(0, index) + newstring;
+    }
+    if (position === "r") {
+        index = newstring.length - 1;
+        result = newstring + oldstring.slice(index, -1);
+    }
+    return result;
+};
+
+console.log(addString("0000", "123", "l"));
+console.log(addString("00000000", "123", "r"));
+
+
