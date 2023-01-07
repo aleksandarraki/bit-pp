@@ -79,3 +79,55 @@ console.log(addString("0000", "123", "l"));
 console.log(addString("00000000", "123", "r"));
 
 
+// 7. Write a function to capitalize the first letter of a string and returns modified string.
+// "js string exercises" -> "Js string exercises"
+
+
+function capitalize(string) {
+    var firstLetter = string[0];
+    var result = firstLetter.toUpperCase() + string.slice(1);
+    return result;
+}
+
+console.log(capitalize("js string exercises"));
+
+
+// 8. Write a function to hide email addresses to protect them from unauthorized users.
+// "somerandomaddress@example.com" -> "somerand...@example.com" 
+
+
+// function hideEmail(email) {
+//     var avg, splitted, part1, part2;
+//     splitted = email.split("@");
+//     part1 = splitted[0];
+//     avg = part1.length / 2;
+//     part1 = part1.substring(0, (part1.length - avg));
+//     part2 = splitted[1];
+//     return part1 + "...@" + part2;
+// };
+
+// console.log(hideEmail("somerandomaddress@example.com"));
+
+
+// 9. Write a program that accepts a string as input and swaps the case of each character. For example, if you input 'The Quick Brown Fox', the output should be 'tHE qUICK bROWN fOX'.
+//        var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+//        var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+// "The Quick Brown Fox" -> "tHE qUICK bROWN fOX" 
+
+
+function swapTheCase(string) {
+    var result = "";
+    for (var i = 0; i < string.length; i++) {
+        if (string[i] === string[i].toLowerCase()) {
+            result += string[i].toUpperCase();
+        } else {
+            result += string[i].toLowerCase();
+        }
+    }
+    return result;
+}
+
+
+console.log(swapTheCase("The Quick Brown Fox"));
+
+
