@@ -129,5 +129,6 @@ function swapTheCase(string) {
 
 
 console.log(swapTheCase("The Quick Brown Fox"));
-
+console.log(swapTheCase("JAVASCRIPT"));
+console.log(swapTheCase("Republic of Serbia"));
 

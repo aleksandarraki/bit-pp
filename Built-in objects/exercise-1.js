@@ -44,7 +44,9 @@ function removeDuplicates(array) {
 
 
     }
-    return array;
+    return array.sort(function(a,b){
+        return a-b;
+    });
 }
 var a = removeDuplicates([8, 13, 8, 9, 12, 8, 1, 1, 4, 13]);
 
@@ -364,3 +366,4 @@ function shufflesArray(array) {
     return shuffleA;
 }
 console.log(shufflesArray([3, 6, 11, 2, 9, 1]));
+
