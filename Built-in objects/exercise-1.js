@@ -5,8 +5,8 @@
 function duplicates(arr) {
     var newArr = [];
     for (var i = 0; i < arr.length; i++) {
-        newArr.push(arr[i]);
-        newArr.push(arr[i]);
+        newArr.push(arr[i], arr[i]);
+
     }
     return newArr;
 }
@@ -31,26 +31,30 @@ console.log(p);
 
 function removeDuplicates(array) {
 
-    for (var i = 0; i < array.length; i++) {
-        for (var j = 0; j < array.length; j++) {
-            if (i !== j) {
-                if (array[i] === array[j]) {
-                    array.splice(j, 1);
-
-                }
-            }
-
+    var newArray = [];
+    array.forEach(function (element) {
+        if (!newArray.includes(element)) {
+            newArray.push(element);
         }
-
-
-    }
-    return array.sort(function(a,b){
-        return a-b;
+    });
+    return newArray.sort(function (a, b) {
+        return (a - b);
     });
 }
 var a = removeDuplicates([8, 13, 8, 9, 12, 8, 1, 1, 4, 13]);
 
 console.log(a);
+
+// drugi nacin
+
+function removeDuplicates(array) {
+    return [...new Set(array)].sort(function (a, b) {
+        return (a - b);
+    });
+}
+
+var p = removeDuplicates([8, 13, 8, 9, 12, 8, 1, 1, 4, 13]);
+console.log(p);
 
 
 /* 3. a. Write a function that checks if a given array has odd number of elements.
