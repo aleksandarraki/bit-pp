@@ -31,13 +31,13 @@ var č = blankString(false);
 
 // 3. Write a function that concatenates a given string n times (default is 1). "Ha" -> "Ha"    "Ha", 3  -> "HaHaHa"
 
-function concat(arr, n) {
-    if (typeof (arr) !== "string") {
+function concat(str, n) {
+    if (typeof (str) !== "string") {
         return "false";
     }
     var result = "";
     for (i = 0; i < n; i++) {
-        result += arr;
+        result += str;
     }
     return result;
 }
@@ -46,13 +46,13 @@ console.log(x)
 
 // 4. Write a function to count the number of letter occurrences in a string. "My random string", "n" -> 2
 
-function numOfl(a) {
-    if (typeof (a) !== "string") {
+function numOfl(str) {
+    if (typeof (str) !== "string") {
         return "unesite rec"
     }
     var sum = 0;
-    for (i = 0; i < a.length; i++) {
-        if (a[i] === "n") {
+    for (i = 0; i < str.length; i++) {
+        if (str[i] === "n") {
             sum += 1;
         }
     }
