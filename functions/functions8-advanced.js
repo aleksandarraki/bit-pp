@@ -24,10 +24,9 @@ console.log(x)
 // Output: 20
 
 var p = (function (a, b) {
-    var a = 4;
-    var b = 5;
+
     return a * b;
-})();
+})(4, 5);
 console.log(p)
 
 var surface = (function (a, b) {
