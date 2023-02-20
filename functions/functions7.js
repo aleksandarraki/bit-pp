@@ -5,9 +5,18 @@
 //kids.&quot;
 //Call that function 3 times with 3 different values for the arguments.
 
-function tellFortune (numberOfChildren, partnersName, geographicLocation, jobTitle) {
-    var future = "You will be a" +  jobTitle +  "in"  + geographicLocation  + "maried to" +  partnersName  + "with " +  numberOfChildren  + "children";
-    console.log(future);
+function tellFortune(numberOfChildren, partnersName, geographicLocation, jobTitle) {
+  var future = "You will be a" + jobTitle + "in" + geographicLocation + "maried to" + partnersName + "with " + numberOfChildren + "children";
+  console.log(future);
+}
+tellFortune(3, "lisa", 'America', "factory worker");
+
+// new sintax
+
+
+const tellFortune = (numberOfChildren, partnersName, geographicLocation, jobTitle) => {
+  var future = `You will be a ${jobTitle} in ${geographicLocation} maried to ${partnersName} with ${numberOfChildren} children`;
+  console.log(future);
 }
 tellFortune(3, "lisa", 'America', "factory worker");
 
@@ -21,23 +30,41 @@ tellFortune(3, "lisa", 'America', "factory worker");
 //years.
 
 function calculateDogAge(a) {
-    var dogAge = a / 7;
-    console.log(dogAge);
+  var dogAge = a / 7;
+  console.log(dogAge);
 }
 calculateDogAge(49);
 calculateDogAge(25);
 calculateDogAge(30);
 
+// new sintax
+
+const calculate = a => {
+  let dogage = a / 7;
+  console.log(dogage);
+};
+calculate(49);
+
+
+
 //b. 
 
-function humanAge (a) {
-    var human = a * 7;
-    console.log(human);
+function humanAge(a) {
+  var human = a * 7;
+  console.log(human);
 }
 
 humanAge(2);
 humanAge(7);
 humanAge(9);
+
+// new sintax 
+
+const calculate2 = a => {
+  let human = a * 7;
+  console.log(human);
+};
+calculate2(2);
 
 // 3. Ever wonder how much a lifetime supply of your favorite snack is? Wonder no more!
 //Write a function named calculateSupply that:
@@ -48,18 +75,32 @@ humanAge(9);
 //Bonus: Accept floating point values for amount per day, and round the result to a round number.
 
 function calculateSupply(age, numPerDay) {
-    var maxAge = 100;
-    var totalNeeded = (numPerDay * 365) * (maxAge - age);
-    var message = 'You will need ' + totalNeeded + ' cups of tea to last you until the ripe old age of ' + maxAge;
-    console.log(message);
-  }
-  
-  calculateSupply(30, 36);
-  calculateSupply(37, 2.5);
-  calculateSupply(49, 400);
+  var maxAge = 100;
+  var totalNeeded = (numPerDay * 365) * (maxAge - age);
+  var message = 'You will need ' + totalNeeded + ' cups of tea to last you until the ripe old age of ' + maxAge;
+  console.log(message);
+}
+
+calculateSupply(30, 36);
+calculateSupply(37, 2.5);
+calculateSupply(49, 400);
 
 
-  // 4. Its hot out! Lets make a converter based on the steps here.
+// new sintax
+
+const calculateSupply2 = (age, numPerDay) => {
+  let maxAge = 100;
+  let totalNeeded = (numPerDay * 365) * (maxAge - age);
+  let message = `You will need ${totalNeeded} cups of tea to last you until the ripe old age of ${maxAge}`;
+  console.log(message);
+}
+
+calculateSupply2(30, 36);
+calculateSupply2(37, 2.5);
+calculateSupply2(49, 400);
+
+
+// 4. Its hot out! Lets make a converter based on the steps here.
 //Create a function called celsiusToFahrenheit:
 //● Store a celsius temperature into a variable.
 //● Convert it to fahrenheit and output NN°C is NN°F.
@@ -68,15 +109,31 @@ function calculateSupply(age, numPerDay) {
 //● Convert it to celsius and output NN°F is NN°C.
 
 function celsiusToFahrenheit(celsius) {
-    var celsiusInF = (celsius*9)/5 + 32;
-    console.log(celsius + '°C is ' + celsiusInF + '°F');
-  }
-  
-  function fahrenheitToCelsius(fahrenheit) {
-    var fahrenheitInC = ((fahrenheit - 32)*5)/9;
-    console.log(fahrenheit + '°F is ' + fahrenheitInC + '°C');
-  }
+  var celsiusInF = (celsius * 9) / 5 + 32;
+  console.log(celsius + '°C is ' + celsiusInF + '°F');
+}
+
+function fahrenheitToCelsius(fahrenheit) {
+  var fahrenheitInC = ((fahrenheit - 32) * 5) / 9;
+  console.log(fahrenheit + '°F is ' + fahrenheitInC + '°C');
+}
 
 
 celsiusToFahrenheit(33);
 fahrenheitToCelsius(75);
+
+// new sintax
+
+const celsiusToFahrenheit2 = (celsius) => {
+  let celsiusInF = (celsius * 9) / 5 + 32;
+  console.log(`${celsius} °C is ${celsiusInF} °F`);
+}
+
+const fahrenheitToCelsius2 = (fahrenheit) => {
+  let fahrenheitInC = ((fahrenheit - 32) * 5) / 9;
+  console.log(`${fahrenheit} °F is ${fahrenheitInC} °C`);
+}
+
+
+celsiusToFahrenheit2(33);
+fahrenheitToCelsius2(75);
