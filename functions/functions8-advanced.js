@@ -29,32 +29,35 @@ var p = (function (a, b) {
 })(4, 5);
 console.log(p)
 
-var surface = (function (a, b) {
-    return a * b;
-})(4, 5);
+    // new sintax
 
-console.log(surface)
+    // const surface = ((a,b) => a * b)(4,5) 
+    // console.log(surface);
+    ((a, b) => console.log(a * b))(4, 5);
 
 
-    // 3. Write IIFE that replaces all appearances of the letters m or M with * and returns the
-    // number of replacements.
-    // Input: prograMming
-    // Output: progra**ing, 2
 
-    (function (string) {
-        var result = "";
-        var count = 0;
-        for (i = 0; i < string.length; i++) {
-            if (string[i] === "m" || string[i] === "M") {
-                result += "*";
-                count++;
-            } else {
-                result += string[i];
-            }
+
+// 3. Write IIFE that replaces all appearances of the letters m or M with * and returns the
+// number of replacements.
+// Input: prograMming
+// Output: progra**ing, 2
+
+(function (string) {
+    var result = "";
+    var count = 0;
+    for (i = 0; i < string.length; i++) {
+        if (string[i] === "m" || string[i] === "M") {
+            result += "*";
+            count++;
+        } else {
+            result += string[i];
         }
-        return console.log(result + "," + count);
+    }
+    return console.log(`${result}, ${count}`);
 
-    })("programMing");
+})("programMing");
+
 
 
 // 4. Write a function with parameters name and surname that returns a function that
@@ -63,7 +66,7 @@ console.log(surface)
 // Output: pera.peric@gmail.com
 
 (function (name, surname) {
-    return console.log(name + "." + surname + "@gmail.com")
+    return console.log(`${name}.${surname}.@gmail.com`)
 })("pera", "peric");
 
 
@@ -77,7 +80,9 @@ console.log(surface)
     console.log(parseInt(n));
 })(034);
 
+//new sintax
 
+(n => console.log(parseInt(n)))(034)
 // 6.
 
 // 7. Write a function that filters elements of the given array so that they satisfy a condition
@@ -98,3 +103,10 @@ function filter(arr, cb) {
 }
 
 console.log(filter([2, 8, 11, 4, 9, 3], function isOdd(e) { return e % 2 !== 0 }))
+
+
+// new sintax
+
+const arr = [2, 8, 11, 4, 9, 3];
+const filterarr = arr.filter(e => e % 2 === 1);
+console.log(filterarr);
