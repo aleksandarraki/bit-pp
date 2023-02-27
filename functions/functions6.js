@@ -48,6 +48,12 @@ function returnArrayOfDigits(number) {
 }
 console.log(returnArrayOfDigits(1256552))
 
+let number = 1236546;
+const arrOfDigits = n => {
+    n.split(",");
+    console.log(number);
+}
+
 
 // 5. Write a program that prints a multiplication table for numbers up to 12.
 

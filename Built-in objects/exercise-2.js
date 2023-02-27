@@ -9,6 +9,14 @@ function reverseAnumber(n) {
 }
 console.log(reverseAnumber(12345));
 
+// new sintax
+
+
+const reverseNumber = (n) => {
+    console.log(`${n}`.split("").reverse().join(""));
+}
+reverseNumber(12345);
+
 
 // 2. Write a JavaScript function that returns a passed string with letters in alphabetical order.
 // Note: Assume punctuation, numbers and symbols are not included in the passed string.
@@ -19,6 +27,13 @@ function alphabeticalOrder(string) {
     return string.toLowerCase().split("").sort().join("");
 }
 console.log(alphabeticalOrder("Webmaster"));
+
+// new sintax es6
+
+const sortWordAlphabeticaly = string => string.toLowerCase().split("").sort().join("")
+
+
+console.log(sortWordAlphabeticaly("Webmaster"));
 
 
 
@@ -34,6 +49,14 @@ function alphabetizeWords(string) {
 console.log(alphabetizeWords("Republic of Serbia"));
 
 
+// new sintax ES6
+
+const alphabetizeWords2 = string => {
+    console.log(string.split(" ").map(e => e.split("").sort().join("")).join(" "))
+}
+
+alphabetizeWords2("Republic of Serbia");
+
 // 4. Write a function to split a string and convert it into an array of words.
 // "John Snow" -> [ "John", "Snow" ]
 
@@ -42,6 +65,11 @@ function splitAstring(string) {
 }
 
 console.log(splitAstring("John Snow"));
+
+// new sintax ES6
+
+const splitString = string => string.split(" ");
+console.log(splitString("John Snow"));
 
 
 // 5. Write a function to convert a string to its abbreviated form.
