@@ -28,6 +28,7 @@ var favouriteMovie = {
     year: "1993"
 }
 console.log(favouriteMovie);
+console.log(favouriteMovie.actors.lead1);
 
 
 // 3. Write a function that creates an object that represents a project. Each project is
@@ -63,6 +64,49 @@ function create(description, programmingLanguage, git, status) {
     return project;
 }
 console.log(create("My project", "Java Script", "git.com", true));
+
+
+// ES6
+
+// 3. Write a function that creates an object that represents a project. Each project is
+// described by: description, programming language, git repository, boolean status that
+// says if the project is in development or not. Add a method that prints out the project&#39;s
+// repository, a method that checks if the project is written in JavaScript as well as a
+// method that checks if the project is in development or not.
+
+
+class Project {
+    constructor(description, programmingLanguage, git, status) {
+        this.description = description;
+        this.programmingLanguage = programmingLanguage;
+        this.git = git;
+        this.status = status
+    };
+
+    printRepo = () => console.log(this.git);
+
+    checkJS = () => {
+        let result = "";
+        if (this.programmingLanguage === "Java Sscript" || this.programmingLanguage === "JavaScript" || this.programmingLanguage === "JS") {
+            result = "true";
+        } else {
+            result = "false";
+        };
+        return result;
+    };
+
+
+    isInDev = () => console.log(this.status);
+
+};
+
+const myP = new Project("Project1", "Python", "GitHub", true);
+console.log(myP);
+console.log(myP.checkJS());
+
+
+
+
 
 
 // 4. Write a function that creates an object that represents a culinary recipe. Each recipe is
