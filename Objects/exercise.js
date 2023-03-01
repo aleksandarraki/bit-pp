@@ -168,3 +168,56 @@ var stringObj = JSON.stringify(p);
 // console.log(stringObj);
 var c = JSON.parse(stringObj);
 console.log(c);
+
+
+
+
+
+//ES6
+// 4. Write a function that creates an object that represents a culinary recipe. Each recipe is
+// described by: name, type of cuisine, complexity (value from 1 to 5), list of ingredients,
+// preparing time, preparing instruction.
+// ○ Add a method that prints out all the ingredients necessary for the meal
+// preparation.
+// ○ Add a method that checks if a meal can be prepared in under 15 minutes.
+// ○ Add a method that changes the type of cuisine to the given value.
+// ○ Add a method that delete a given ingredient from the list of ingredients.
+
+
+
+class Recepie {
+    constructor(n, ct, com, ing, t, ins) {
+        this.name = n;
+        this.cuisineType = ct;
+        this.complexity = com;
+        this.ingridients = ing;
+        this.time = t;
+        this.instructions = ins
+    };
+
+    printIng = () => console.log(this.ingridients);
+
+    checkIsUnder = () => this.time < 15;
+
+    changeCuisineType = newCuisineType => this.cuisineType = newCuisineType;
+
+    deleteIngredient = ingredient => {
+        let updatedIngredients = [];
+        for (let i = 0; i < this.ingridients.length; i++) {
+            if (this.ingridients[i] !== ingredient) {
+                updatedIngredients[updatedIngredients.length] = this.ingridients[i];
+            };
+        };
+        this.ingridients = updatedIngredients;
+    };
+};
+
+const myRecepie = new Recepie("Paprikaš", "Hungarian cuisine", 3, ["paprika", "crni luk", "biber", "so", "vegeta"], 30, "Sipati vodu lonac....");
+console.log(myRecepie);
+
+myRecepie.printIng();
+console.log(myRecepie.checkIsUnder());
+console.log(myRecepie.changeCuisineType("Serbian"));
+console.log(myRecepie);
+myRecepie.deleteIngredient("so");
+console.log(myRecepie);
