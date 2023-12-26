@@ -76,6 +76,8 @@ var b = -2;
 var c = -6;
 var d = 0;
 var e = -1;
+
+
 if ( a > b && a > c && a > d && a > e ) {
     console.log(a);
 } else if ( b > a && b > c && b > d && b > e ) {
@@ -87,6 +89,28 @@ if ( a > b && a > c && a > d && a > e ) {
 } else if ( e > a && e > b && e > c && e > d ) {
     console.log(e);
 }
+
+
+// second way
+var a = -5;
+var b = -2;
+var c = -6;
+var d = 0;
+var e = -1;
+var result = "";
+if ( a > b && a > c && a > d && a > e ) {
+    result = a;
+} else if ( b > a && b > c && b > d && b > e ) {
+   result = b;
+} else if ( c > a && c > b && c > d && c > e ) {
+    result = c;
+} else if ( d > a && d > b && d > c && d > e ) {
+    result = d;
+} else if ( e > a && e > b && e > c && e > d ) {
+    result = e;
+}
+
+console.log(result);
 
 // 7. Write a conditional statement to print three numbers as sorted number list.Sample numbers : 0, -1, 4
 
