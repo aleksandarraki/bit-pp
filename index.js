@@ -6,7 +6,7 @@ s++;
 console.log(s)
 
 var a = "1s"
-console.log(a)
+console.log(typeof a)
 
 // Think about expressions: 3-2-31, 3*5-7/3, 4/2-1.14*3.
 var a = 3 - 2 - 31;
@@ -52,7 +52,11 @@ var b = true ;
 var c = null ;
 var d = "false";
 var e = 56;
-console.log( typeof c);
+console.log( typeof a);
+console.log(typeof b)
+console.log(typeof c)
+console.log(typeof d)
+console.log(typeof e)
 
 // 13.
 
