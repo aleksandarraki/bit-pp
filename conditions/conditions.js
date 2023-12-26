@@ -43,7 +43,7 @@ var result = ""
 if ( a * b * c < 0 ) {
     result = "-"
 } else if ( a * b * c > 0 ) {
-    rezult = "+"
+    result = "+"
 }
 console.log(result)
 
