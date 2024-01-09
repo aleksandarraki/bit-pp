@@ -373,13 +373,49 @@ switch ( grade ) {
         result = "Not so good";
         break;
     case "E":
-        result = "F";
+        result = "Failed";
         break;
         default:
             result = "Unkown";
             break;
 }
 console.log(result)
+
+// switch in functions
+
+function gradeDescription(grades) {
+    let result = "";
+
+    switch(grades) {
+        case "A":
+            result = "Good job!"
+            break;
+
+        case "B":
+            result = "Pretty good"
+            break;    
+
+        case "C":
+            result = "Passed"
+            break;
+
+        case "D":
+            result = "Not so good"
+            break;
+
+        case "E":
+            result = "Failed"
+            break;
+            default:
+                result = "Unknown";
+                break;
+    }
+    return result;
+}
+
+console.log(gradeDescription("A"));
+console.log(gradeDescription("E"));
+console.log(gradeDescription("F"));
 
 /* 7. Write a program that takes as input a city name and outputs the country where the city is.
 You may choose which cities and countries you want to output yourself, however there has
