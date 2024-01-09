@@ -45,6 +45,18 @@ for ( var i = 0; i <= 15; i++) {
 }
 
 
+//little bit diferent
+var result = "";
+for (var i = 0; i <= 15; i++) {
+    if (i % 2 === 0) {
+        result = `Number ${i} is even.`;
+    } else if (i % 2 === 1) {
+        result = `Number ${i} is odd.`;
+    }
+    console.log(result);
+}
+
+
 // 2. Write a program to sum the multiples of 3 and 5 under 1000.
 
 var sum = 0;
@@ -88,7 +100,7 @@ for ( i = 0; i < a.length; i++) {
 
 // 6. Write a program that outputs the sum of squares of the first 20 numbers.
 
-//var i = 0;
+
 var sum = 0;
 var square = 0;
 for ( var i = 0; i <=20; i++) {
