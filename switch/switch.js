@@ -31,6 +31,46 @@ switch (day) {
 }
 console.log(result)
 
+function switchDay(day) {
+    let result = "";
+    switch(day){
+        case 1:
+            result = "Monday";
+            break;
+
+        case 2:
+            result = "Tuesday";
+            break;
+        
+        case 3:
+            result = "Wednesday";
+            break;
+            
+        case 4:
+            result = "Thursday";
+            break;
+            
+        case 5:
+            result = "Friday";
+            
+        case 6:
+            result = "Saturday";
+            break;
+            
+        case 7:
+            result = "Sunday";
+            break
+            
+            default:
+            result = "Number must be betwen 1 and 7";
+            break;    
+    }
+
+    return result;
+}
+
+console.log(switchDay(10));
+
 /* 2. Write a program that shows text representation of a day in a week for a number input from
 1 to 7. All other cases output a message explaining that input must be a number between 1
 and 7.
@@ -107,6 +147,50 @@ switch (day) {
 }
 console.log(result)
 
+// switch in functions
+
+function checkDay(day) {
+    let result = "";
+    switch(day) {
+
+        case 1:
+            result = "It is weekday";
+            break;
+
+        case 2:
+            result = "It is weekday";
+                break;
+        
+        case 3:
+            result = "It is weekday";
+            break; 
+            
+        case 4:
+            result = "It is weekday";
+            break;
+
+        case 5:
+            result = "It is weekday";
+            break;
+
+        case 6:
+            result = "It is weekend";
+            break;
+
+        case 7:
+            result = "It is weekend";
+            break;
+            default:
+                result = "Input must be number betven 1 and 7";
+                break;
+    }
+    return result;
+}
+
+console.log(checkDay(6));
+
+
+
 /* 4. Write a program that for a 1-12 number input (representing a month in a year) shows that
 month’s name. All other cases output a message explaining that input must be a number
 between 1 and 12.
@@ -158,6 +242,71 @@ switch (month ) {
             break;
 }
 console.log(result)
+
+// switch in functions
+
+function checkMonth(month) {
+    let result = "";
+
+    switch(month) {
+        case 1:
+            result = "January";
+            break;
+
+        case 2:
+            result = "Februaray";
+            break;
+            
+        case 3:
+            result = "March";
+            break;
+            
+        case 4:
+            result = "April";
+            break;
+            
+        case 5:
+            result = "May";
+            break;
+            
+        case 6:
+            result = "June";
+            break;
+            
+        case 7:
+            result = "July";
+            break;
+            
+        case 8:
+            result = "August";
+            break;
+            
+        case 9:
+            result = "September";
+            break;
+            
+        case 10:
+            result = "October";
+        break;
+        
+        case 11:
+            result = "November";
+            break;
+
+        case 12:
+            result = "Decemre";
+            break;
+            default:
+                result = "Input must be a number between 1 and 12";
+                break;   
+    }
+
+    return result;
+}
+
+console.log(checkMonth(10));
+console.log(checkMonth(5));
+console.log(checkMonth(14));
 
 /* 5. Write a program that for a 1-12 number input (representing a month in a year) shows what
 season it is. All inputs different from 1-12 output a message explaining that input must be a
