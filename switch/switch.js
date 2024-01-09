@@ -308,6 +308,8 @@ console.log(checkMonth(10));
 console.log(checkMonth(5));
 console.log(checkMonth(14));
 
+
+
 /* 5. Write a program that for a 1-12 number input (representing a month in a year) shows what
 season it is. All inputs different from 1-12 output a message explaining that input must be a
 number between 1 and 12. */
