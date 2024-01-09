@@ -479,6 +479,42 @@ switch ( operation ) {
         break;
 }
 
+// switch in functions
+
+function switchOperator(operator) {
+    let result = 0;
+    let a = 21;
+    let b = 7;
+    switch(operator) {
+        case "+":
+            result = a + b;
+            break;
+
+        case "-":
+            result = a - b;
+            break;
+            
+        case "*":
+            result = a * b;
+            break;
+            
+        case "/":
+            result = a / b;
+            break;
+            
+            default:
+                result = "Error !"
+                break;
+    }
+    return result;
+}
+
+console.log(switchOperator("*"));
+
+console.log(switchOperator("+"));
+
+console.log(switchOperator("%"));
+
 /* 9. Write a switch statement which tests val and sets answer for the following conditions:
 1 - alpha
 2 - beta
