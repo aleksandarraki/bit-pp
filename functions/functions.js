@@ -6,8 +6,10 @@ function getMax(a, b) {
     if (b > a) return b;
     return "Numbers are equal";
 }
-var result = getMax(40, 105);
+var result = getMax(40, 105.5254555454);
 console.log(result)
+
+// ES6
 
 const getMax = (n1, n2) => Math.max(n1, n2);
 console.log(getMax(100, 200));
@@ -26,6 +28,19 @@ function evenOrOdd(k) {
 var result = evenOrOdd(31);
 console.log(result)
 
+// ES6
+
+const isOdd = n => {
+    let result = "";
+    if (n % 2 === 0) {
+        result = "no";
+    } else {
+        result = "yes";
+    }
+    return result;
+}
+console.log(isOdd(25442));
+
 //3. Write a program that checks if a given number is a three digit long number.
 
 function threeDigit(x) {
@@ -42,6 +57,21 @@ function threeDigit(x) {
 var result = threeDigit(100);
 console.log(result)
 
+// ES6
+
+const numberLength = n => {
+    let newNumber = n + "";
+    let result = "";
+    if(newNumber.length === 3) {
+        result = "Number is three digit long.";
+    } else {
+        result = " NO";
+    }
+    return result;
+}
+
+console.log(numberLength(5431));
+
 //4. Write a program that calculates an arithmetic mean of four numbers.
 
 function arithmeticMean(a, b, c, d) {
@@ -54,15 +84,84 @@ console.log(result)
 /*5. Write a program that draws a square of a given size. For example, if the size of
 square is 5 the program should draw:
 *****
-* *
-* *
-* *
-*****
-6. Write a program that draws a horizontal chart representing three given values.
-For example, if values are 5, 3, and 7, the program should draw:
-* * * * *
-* * *
-* * * * * * *   */
+*   *
+*   *
+*   *
+***** */
+
+
+function horChart(a,b,c,d,e) {
+    let result = "";
+    for( var i = 0; i < a; i++) {
+        result += "*";
+    }
+    if(i === a){
+        result += "\n";
+    }
+    
+    for( var j = 0; j < b; j++) {
+        result += "* " + " " + " ";
+    }
+
+    if (j === b) {
+        result += "\n";
+    }
+
+    for ( var k = 0; k < c; k++) {
+        result += "* " + " " + " ";
+    }
+
+    if (k === c) {
+        result += "\n";
+    }
+
+    for ( var l = 0; l < d; l++) {
+        result += "* " + " " + " ";
+    }
+    if (l === d) {
+        result += "\n";
+    }
+
+    for( var m = 0; m < e; m++) {
+        result += "*";
+    }
+    return result;
+}
+
+console.log(horChart(5,2,2,2,5));
+
+
+
+// 6. Write a program that draws a horizontal chart representing three given values.
+// For example, if values are 5, 3, and 7, the program should draw:
+// * * * * *
+// * * *
+// * * * * * * *   
+
+function horChart(a,b,c) {
+    let result = "";
+    for( var i = 0; i < a; i++) {
+        result += "* ";
+    }
+    if(i === a){
+        result += "\n";
+    }
+    
+    for( var j = 0; j < b; j++) {
+        result += "* ";
+    }
+
+    if (j === b) {
+        result += "\n";
+    }
+
+    for ( var k = 0; k < c; k++) {
+        result += "* ";
+    }
+    return result;
+}
+
+console.log(horChart(5,3,7));
 
 //7. Write a program that calculates a number of digits of a given number.
 
@@ -139,7 +238,7 @@ console.log(sum([2, 1, 6, 7, 7, 7, 9, 4, 11]));
 // 10. Write a program that calculates the number of appearances of a letter a in a given string. Modify the program so it calculates the number of both letters a and A.
 
 function numberOfA(primer) {
-    if (typeof (primer) !== "string") {
+    if (typeof primer !== "string") {
         console.log("unesite rec");
     }
     var sum = 0;
@@ -203,6 +302,6 @@ var k = newWord("Bora", 2);
 console.log(x);
 console.log(k)
 
-
-const concatS = (s, n) => s.repeat(n);
+//ES6
+const concatS = (str, n) => str.repeat(n);
 console.log(concatS("Bora", 2));
