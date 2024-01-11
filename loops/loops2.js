@@ -15,16 +15,16 @@ console.log(result);
 
 // b.
 
-var e = 3;
-var a = [5, -4.2, 18, 7];
-result = "";
-for ( i = 0; i < a.length; i++ ) {
-    if ( a[i] === 3 ) {
-        result = "yaes";
-} else if ( a[i] !== 3 ) {
+let e = 3;
+let a = [5, -4.2, 18, 7];
+let result = "";
+for(let i = 0; i < a.length; i++) {
+    if( a[i] === e ) {
+        result = "yes";
+    } else {
         result = "no";
-}
-console.log(result);
+    }
+    console.log(result);
 }
 
 
