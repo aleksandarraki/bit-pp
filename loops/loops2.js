@@ -4,9 +4,9 @@ var e = 3;
 var a = [ 5, -4.2, 3, 7 ];
 result = "";
 for ( i = 0; i < a.length; i++ ) {
-    if ( a[i] === 3 ) {
+    if ( a[i] === e ) {
         result = "yes";
-} else if ( a[i] !== 3 ) {
+} else if ( a[i] !== e ) {
     result = "no";
 }
 console.log(result);
