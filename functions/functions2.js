@@ -150,17 +150,32 @@ console.log(isPrime(1))
 function replaceSpace(string, sep) {
     var newString = "";
     for (var i = 0; i < string.length; i++) {
-        var element = string[i];
-        if (element === " ") {
+        if (string[i] === " ") {
             newString += sep;
         } else {
-            newString += element;
+            newString += string[i];
         }
     }
 
     return newString;
 }
 console.log(replaceSpace("My random string", "_"))
+
+// ES6
+
+const addSeparator = (str,s) => {
+    let newS = "";
+    for ( let i = 0; i < str.length; i++) {
+        if( str[i] === " ") {
+            newS += s;
+        } else {
+            newS += str[i];
+        }
+    
+    }
+    return newS;
+}
+console.log(addSeparator("My random string", "_"));
 
 
 //  10. Write a function to get the first n characters and add “...” at the end of newly created string.
