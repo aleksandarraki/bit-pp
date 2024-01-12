@@ -238,7 +238,7 @@ function pension(godinaRođenja, tekućaGodina, pol) {
     }
     return result;
 }
-console.log(pension(1954, 2022, "m"))
+console.log(pension(1978, 2022, "m"))
 
 
 

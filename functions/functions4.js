@@ -1,22 +1,18 @@
 
 // 1. Write a program that checks if a given element e is in the array a. Input: e = 3, a = [5, -4.2, 3, 7] Output: yes
 
-function checkIf (a) {
-    var e = 3;
 
-result = "";
-for ( i = 0; i < a.length; i++ ) {
-    if ( a[i] === e ) {
-        result = "yes";
-        return result;
-} else if ( a[i] !== e ) {
-        result = "no";
+function checkIfPresent(a, e) {
+    var result = "no";
+    for (var i = 0; i < a.length; i++) {
+        if (a[i] === e) {
+            result = "yes"
+        } 
+    } return result
 }
 
-}
-return result;
-}
-console.log(checkIf([5, -4.2, 3, 7]))
+var k = checkIfPresent([5, -4.2, 7], 3);
+console.log(k)
 
 
 // 2. Write a program that multiplies every positive element of a given array by 2. Input array: [-3, 11, 5, 3.4, -8] Output array: [-3, 22, 10, 6.8, -8]
@@ -48,8 +44,8 @@ function findMin (a) {
         }
     
     }
-    console.log(a.indexOf(min));
-    return min;
+    return `${min}, ${ a.indexOf(min)}`
+    // return min + "," + a.indexOf(min);
     
 
 }
@@ -87,6 +83,19 @@ console.log(sumOfP([3, 11, -5, -3, 2]))
 
 
 // 6. Write a program that checks if a given array is symmetric. An array is symmetric if it can be read the same way both from the left and the right hand side. Input array: [2, 4, -2, 7, -2, 4, 2] Output: The array is symmetric.
+
+function checkIfSymetric(arr) {
+    let output = "";
+    for(let i = 0, j = arr.length-1; i <= j; i++, j--){
+        if(arr[i] === arr[j]){
+            output = "The array is symetric."
+        } else if(arr[i] !== arr) {
+            output ="No!"
+        }
+    }
+    return output;
+}
+console.log(checkIfSymetric([2, 4, -2, -2, 4, 2]));
 
 // 7. Write a program that intertwines two arrays. You can assume the arrays are of the same length. Input arrays: [4, 5, 6, 2], [3, 8, 11, 9] Output array: [4, 3, 5, 8, 6, 11, 2, 9]
 
