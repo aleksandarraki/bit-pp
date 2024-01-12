@@ -47,6 +47,36 @@ function newArr(arr) {
 
 console.log(newArr([3, 500, -10, 149, 53, 414, 1, 19]))
 
+ /*4. Sort a previously defined array. Place its sorted values into a new array whose
+values are equivalent to the first array&#39;s values multiplied by 2.
+Input: [ 13, 11, 15, 5, 6, 1, 8, 12 ]
+Output: [ 2, 10, 12, 16, 22, 24, 26, 30 ] */
+
+function sortArray(arr){
+    let sorted = arr.sort(function(a,b){
+        return a - b;
+    })
+    let newArr = [];
+    for( i = 0; i < sorted.length; i++){
+        newArr.push(sorted[i] * 2); 
+    }
+    return newArr;
+}
+console.log(sortArray([ 13, 11, 15, 5, 6, 1, 8, 12 ]));
+
+
+/*5.Sort a previously defined array in a descending order and display it in the
+console.
+Input: [ 13, 11, 15, 5, 6, 1, 8, 12 ]
+Output: [ 15, 13, 12, 11, 8, 6, 5, 1 ] */
+
+function sortInDescendingOrder(arr) {
+    return arr.sort(function(a,b) {
+        return b - a;
+    })
+}
+
+console.log(sortInDescendingOrder([ 13, 11, 15, 5, 6, 1, 8, 12 ]));
 
 
 
@@ -55,7 +85,7 @@ subtracts all the odd numbers 1 to 500 from the calculated sum. The result shoul
 be multiplied by 12.5 and displayed in console.
 Output: 2350000*/
 
-function addSubstract(a) {
+function addSubstract() {
     var sum1 = 0;
     var sum2 = 0;
     for (i = 1; i <= 1000; i++) {

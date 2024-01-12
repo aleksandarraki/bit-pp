@@ -161,6 +161,11 @@ var arrayB = [3, 8, 11, 9];
 var arrayC = arrayA.concat(arrayB);
 console.log(arrayC)
 
+// functional way ES6
+
+const concatinate = (arr1,arr2) => arr1.concat(arr2);
+console.log(concatinate([4, 5, 6, 2], [3, 8, 11, 9]));
+
 
 
 // 9. Write a program that deletes a given element e from the array a. Input: e = 2, a = [4, 6, 2, 8, 2, 2] Output array: [4, 6, 8]

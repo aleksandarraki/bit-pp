@@ -90,12 +90,13 @@ function checkIfSymetric(arr) {
         if(arr[i] === arr[j]){
             output = "The array is symetric."
         } else if(arr[i] !== arr) {
-            output ="No!"
+            output ="The array is not symetric."
         }
     }
     return output;
 }
 console.log(checkIfSymetric([2, 4, -2, -2, 4, 2]));
+console.log(checkIfSymetric([3, 4, 12, 8]));
 
 // 7. Write a program that intertwines two arrays. You can assume the arrays are of the same length. Input arrays: [4, 5, 6, 2], [3, 8, 11, 9] Output array: [4, 3, 5, 8, 6, 11, 2, 9]
 
@@ -136,30 +137,24 @@ console.log(deleteEl( [4, 6, 2, 8, 2, 2] ))
 // 10. Write a program that inserts a given element e on the given position p in the array a. If the value of the position is greater than the array length, print the error message. Input: e = 78, p = 3, a = [2, -2, 33, 12, 5, 8] Output: [2, -2, 33, 78, 12, 5, 8]
 
 
-
-
-function insert (arr, e, p) {
-    if (p > arr.length) {
-        console.log("Error");
-        return arr;
+const insertE = (arr,e,p) => {
+    let newA = [];
+    if(arr.length < p){
+        return "ERROR";
     }
-
-    var newArr = [];
-
-    for (var i = 0, j = 0; i < arr.length; i++) {
-        if(i === p){
-            newArr[j] = e;
-            newArr[j+1] = arr[i];
-            j +=2;
-        }else {
-            newArr[j] = arr[i];
-            j++;
-        }
+    for(let i = 0; i < arr.length; i++) {
+        if(i !== p){
+            newA.push(arr[i]);
+        } else if (i === p){
+            newA.push(e);
+            newA.push(arr[i]);
+        } 
     }
-    return newArr
+    return newA;
 }
 
-console.log(insert(  [2, -2, 33, 12, 5, 8], 78, 3 ))
+console.log(insertE([2, -2, 33, 12, 5, 8], 78, 3));
+console.log(insertE([1, 2, 3, 8, 54], 15, 12));
 
 
 
