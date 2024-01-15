@@ -28,6 +28,17 @@ function combineArrays(a1, a2) {
 }
 console.log(combineArrays(["a,", "b", "c"], [1, 2, 3]))
 
+// ES6
+
+const combineArr = (a1,a2) => {
+    let newA = [];
+    for(let i = 0; i < a1.length; i++) {
+        newA.push(a1[i],a2[i]);
+    }
+    return newA;
+}
+console.log(combineArr(["a,", "b", "c"], [1, 2, 3]));
+
 
 // 3. Write a function that rotates a list by k elements. For example [1,2,3,4,5,6] rotated by two becomes [3,4,5,6,1,2]
 
