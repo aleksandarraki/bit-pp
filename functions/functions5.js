@@ -45,7 +45,50 @@ function newArr(arr) {
     return newarr;
 }
 
-console.log(newArr([3, 500, -10, 149, 53, 414, 1, 19]))
+console.log(newArr([3, 500, -10, 0, 149, 53, 414, 1, 19]))
+
+
+/* 3. Initialize two arrays. The first one should contain student names, the second one the number of points for each student. Display students' names with their corresponding grade. Use the following ranges:
+51-60 -> 6,
+61-70 -> 7,
+71-80 -> 8,
+81-90 -> 9,
+91-100 -> 10.
+Input: 
+[ "Micahel", "Anne", "Frank", "Joe", "John", "David", "Mark", "Bill" ], [ 50, 39, 63, 72, 99, 51, 83, 59 ]
+Output: 
+Bill acquired 59 points and earned 6. Micahel acquired 50 points and failed to complete the exam.  */
+
+function grades(names,points) {
+    var output = "";
+  
+    for (var i = 0; i < points.length; i++) {
+      if (points[i] <= 50) {
+          var result = "failed"
+      }
+      if (points[i] > 50 && points[i] <= 60) {
+          result = 6
+      }
+      if (points[i] > 60 && points[i] <= 70) {
+          result = 7
+      }
+      if (points[i] > 70 && points[i] <= 80){
+          result = 8
+      }
+      if (points[i] > 80 && points[i] <= 90) {
+          result = 9
+      }
+      if (points[i] <= 100 && points[i] > 90) {
+          result = 10
+      }
+      output += names[i] + " " + result + "\n";
+    }
+    return output
+  }
+  
+  var c = grades([ "Michael", "Anne", "Frank", "Joe", "John", "David", "Mark", "Bill" ], [ 50, 39, 63, 72, 99, 51, 83, 59 ]);
+  console.log(c)
+  
 
  /*4. Sort a previously defined array. Place its sorted values into a new array whose
 values are equivalent to the first array&#39;s values multiplied by 2.
@@ -77,6 +120,43 @@ function sortInDescendingOrder(arr) {
 }
 
 console.log(sortInDescendingOrder([ 13, 11, 15, 5, 6, 1, 8, 12 ]));
+
+
+/* 6. Write a program that uses a loop to add all the even numbers from 1 to 1000 and subtracts all the odd numbers 1 to 500 from the calculated sum. The result should then be multiplied by 12.5 and displayed in console.
+Output: 2350000  */
+
+function loopMath() {
+    var even = 0, odd = 0;
+    for (var i = 0, j = 500; i <= 1000; i += 2, j--) {
+        even += i;
+        if (j % 2 === 1) {
+            odd += j
+        }
+    }   
+    var result = (even - odd) * 12.5;
+    return result
+}
+
+var q = loopMath();
+console.log(q)
+
+
+/* 7. Define a 10 element array. Take the first two letters from every string (that has at least 2
+    letters) in the array and create a new string from them. Print it out in the console.
+    Input: [ "M", "Anne", 12, "Steve","Joe","John","David", "Mark", true, "A" ] */
+
+    function createString(arr) {
+        var result = "";
+       for(var i = 0; i < arr.length; i++){
+        if(typeof arr[i] !== "number" && arr[i].length > 2) {
+            var part = arr[i][0] + arr[i][1];
+            result += part;
+        }
+       }
+       return result;
+    }
+
+    console.log(createString([ "M", "Anne", 12, "Steve","Joe","John","David", "Mark", true, "A" ]));
 
 
 
