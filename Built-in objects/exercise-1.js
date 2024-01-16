@@ -72,13 +72,12 @@ function checkIfOdd(array) {
 }
 console.log(checkIfOdd([1, 2, 9, 2, 1]));
 
-// drugi nacin
+// drugi nacin ES6
 
-function checkIfOdd(array) {
-    return array.length % 2 !== 0;
-}
-console.log(checkIfOdd([1, 2, 9, 2, 1]));
-console.log(checkIfOdd([1, 2, 9, 2, 1, 12, 3, 25]));
+const check = (arr) => arr.length % 2 === 1;
+
+console.log(check([1, 2, 9, 2, 1]));
+console.log(check([1, 2, 9, 2, 1, 12, 3, 25]));
 
 // b. Write a function that counts the number of elements less than the middle
 // element. If the given array has an even number of elements, print out an error
@@ -157,6 +156,20 @@ function find(array) {
     return newArr;
 }
 console.log(find(["JavaScript", "Programming", "fun", "product"]));
+
+// ES6
+
+const startingpro = (arr) => {
+    let newA = [];
+    for(let i = 0; i < arr.length; i++) {
+       
+        if(arr[i].slice(0,3).toLowerCase() === "pro"){
+            newA.push(arr[i]);
+        }
+    }
+    return newA;
+}
+console.log(startingpro(["JavaScript", "Programming", "fun", "product"]));
 
 
 // c. Write a function that expects an array and a callback function that filters out
