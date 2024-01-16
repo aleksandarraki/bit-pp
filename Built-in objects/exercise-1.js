@@ -255,6 +255,14 @@ function checkIf(string) {
 console.log(checkIf("ASDFG"));
 console.log(checkIf("sertzhjk"));
 
+// second way
+
+function checkIf2(str){
+    return str.toUpperCase() === str;
+}
+console.log(checkIf2("ASDFG"));
+console.log(checkIf2("sertzhjk"));
+
 
 
 
@@ -262,6 +270,7 @@ console.log(checkIf("sertzhjk"));
 
 function checkNumbersInString(string) {
     return /[0-9]/.test(string);
+   
 }
 
 console.log(checkNumbersInString("wefghjkl"));

@@ -81,6 +81,11 @@ function convert(string) {
 }
 console.log(convert("John Snow"));
 
+// ES6 
+
+const convert = (str) => `${str.split(" ")[0]} ${str.split(" ")[1].slice(0,1)}.`
+console.log(convert("John Snow"));
+
 
 
 // 6. Write a function that adds string to the left or right of string, by replacing it’s characters.
