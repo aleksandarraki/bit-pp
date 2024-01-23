@@ -119,13 +119,13 @@ function filter(arr, cb) {
         var element = arr[i];
         var isTrue = cb(element);
         if (isTrue) {
-            newarr[newarr.length] = arr[i];
+            newarr.push(arr[i]);
         }
     }
     return newarr;
 }
 
-console.log(filter([2, 8, 11, 4, 9, 3], function isOdd(e) { return e % 2 !== 0 }))
+console.log(filter([2, 8, 11, 4, 9, 3], (e) => e % 2 !== 0 ))
 
 
 // new sintax
