@@ -83,7 +83,30 @@ console.log(p)
 //new sintax
 
 (n => console.log(parseInt(n)))(034)
-// 6.
+
+
+/* 6. Write a function that checks if a given string is valid password. The password is valid if it
+is at least 6 characters long and contains at least one digit. The function should receive
+two callbacks named successCallback and errorCallback that should be called in case
+password is correct or invalid.
+Input: JSGuru
+Output: Your password is invalid!
+Input: JSGuru123
+Output: Your password is cool! */
+
+let y = (function (str,cb1,cb2){
+    let result;
+    if(str.length >= 6 && /[0-9]/.test(str)){
+        result = cb1;
+    }else {
+        result = cb2;
+    }
+   return result();
+}
+)("alek23", () => "Your password is cool", () => "Your password is invalid")
+console.log(y);
+
+
 
 // 7. Write a function that filters elements of the given array so that they satisfy a condition
 // given by the callback function.
