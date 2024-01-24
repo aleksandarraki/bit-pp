@@ -5,7 +5,8 @@
 
 
 const arr6 = ["hello", "there", "ES", 6];
-const capitalize = arr6.filter(e => typeof e === "string").map(e => e[0].toUpperCase() + e.slice(1));
+const capitalize = arr6.filter(e => typeof e === "string")
+.map(e => e[0].toUpperCase() + e.slice(1));
 console.log(capitalize);
 
 
@@ -46,7 +47,10 @@ const arr11 = [4, 6, 11, -9, 2.1];
 
 const increasearr11 = arr11.map(e => e + 2);
 console.log(increasearr11);
-
+ 
+const array = [6, 8, 13, -7, 4.1]
+let increaseBy1 = array.map(e => e + 1)
+console.log(increaseBy1);
 
 
 // 4. Write a function that filters all even elements of the array.
