@@ -205,11 +205,8 @@ console.log(calculateProduct([2, 8, 3])); // Old way of solving this exercise
 
 
 // ES6
-const arr = [2, 8, 3];
-
-const product = arr.reduce((acumulator, arrElementValue) => acumulator * arrElementValue)
-
-console.log(product);
+const calculateProduct = arr => arr.reduce((acumulator,item) => acumulator *= item);
+console.log(calculateProduct([2, 8, 3, 5]));
 
 
 
